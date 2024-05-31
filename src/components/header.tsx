@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import thinking from "../../public/thinking.jpg"
 
 const navLinks = [
   {
@@ -26,7 +27,7 @@ export function Header() {
     <header className="flex items-center justify-between border-b px-7 py-4">
       <Link href="/">
         <Image
-          src="https://bytegrad.com/course-assets/youtube/example-logo.png"
+          src={thinking}
           alt="Logo"
           className="h-[35px] w-[35px]"
           width="35"

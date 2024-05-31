@@ -1,21 +1,15 @@
-import prisma from "@/lib/db"
-import { notFound } from "next/navigation"
+import { Spinner } from "@/components"
+import Post from "@/components/post"
+import { Suspense } from "react"
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
 
-export default async function Page({params}: {params: { id: string}}) {
-  const post = await prisma.post.findUnique({
-    where: {
-      id: parseInt(params.id)
-    }
-  })
-
-  if (!post) {
-    notFound()
-  }
+export default function Page({ params }: { params: { id: string } }) {
+  const { id } = params
 
   return (
-    <main className="px-7 pt-24 text-center">
-      <h1 className="text-5xl font-semibold mb-7">{post.title}</h1>
-      <p className="max-w-[700px] mx-auto">{post.body}</p>
-    </main>
+    <Suspense fallback={<Spinner />}>
+      <Post id={id} />
+    </Suspense>
   )
 }

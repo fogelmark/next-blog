@@ -1,4 +1,3 @@
-// import prisma from "@/lib/db";
 import prisma from "@/lib/db"
 import Link from "next/link"
 
@@ -7,11 +6,11 @@ export async function PostsList() {
   const posts = await prisma.post.findMany()
 
   return (
-    <ul>
+    <ul className="grid md:w-1/2 gap-4 max-sm:w-full mx-auto">
       {posts.map((post) => (
-        <li key={post.id} className="mb-3">
-          <Link href={`/posts/${post.id}`}>{post.title}</Link>
-        </li>
+        <Link className="rounded py-4 shadow-md bg-zinc-50 hover:bg-white" key={post.id} href={`/posts/${post.id}`}>
+            {post.title}
+        </Link>
       ))}
     </ul>
   )

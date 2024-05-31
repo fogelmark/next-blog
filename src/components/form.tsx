@@ -22,7 +22,7 @@ export function Form() {
         rows={6}
         required
       />
-      <button className="h-10 bg-blue-500 px-5 rounded text-white">
+      <button className="h-10 bg-blue-500 hover:bg-blue-400 px-5 rounded text-white">
         Submit
       </button>
     </form>
