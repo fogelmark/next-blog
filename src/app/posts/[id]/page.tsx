@@ -8,7 +8,14 @@ export default function Page({ params }: { params: { id: string } }) {
   const { id } = params
 
   return (
-    <Suspense fallback={<Spinner />}>
+    <Suspense
+      fallback={
+        <main className="grid gap-7 pt-24 mx-auto">
+          <Skeleton count={2} height={50} width={700} />
+          <Skeleton count={6} width={700} />
+        </main>
+      }
+    >
       <Post id={id} />
     </Suspense>
   )

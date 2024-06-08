@@ -6,10 +6,14 @@ export async function PostsList() {
   const posts = await prisma.post.findMany()
 
   return (
-    <ul className="grid md:w-1/2 gap-4 max-sm:w-full mx-auto">
+    <ul className="mx-auto grid gap-6 max-sm:w-full md:w-1/2">
       {posts.map((post) => (
-        <Link className="rounded py-4 shadow-md bg-zinc-50 hover:bg-white" key={post.id} href={`/posts/${post.id}`}>
-            {post.title}
+        <Link
+          className="border-b pb-6 text-lg hover:border-zinc-700 hover:bg-white"
+          key={post.id}
+          href={`/posts/${post.id}`}
+        >
+          {post.title}
         </Link>
       ))}
     </ul>
