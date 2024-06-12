@@ -8,7 +8,7 @@ export default function Home() {
       <h1 className="mb-10 text-4xl font-bold md:text-5xl">
         Welcome to <FlipWords words={words} className="w-[110px]" /> blog!
       </h1>
-      <section className="mx-auto max-w-[750px] space-y-6 text-center leading-8 mb-6">
+      <section className="mx-auto mb-6 max-w-[750px] space-y-6 text-center leading-8">
         <article>
           <p className="font-bold">Calling all passionate developers!</p>
           <p>

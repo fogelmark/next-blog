@@ -1,7 +1,7 @@
 import { PostsList } from "@/components"
 import { Suspense } from "react"
 import Skeleton from "react-loading-skeleton"
-import 'react-loading-skeleton/dist/skeleton.css'
+import "react-loading-skeleton/dist/skeleton.css"
 
 export default async function Page() {
   return (
