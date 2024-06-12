@@ -12,12 +12,14 @@
   "dependencies": {
     "@kinde-oss/kinde-auth-nextjs": "^2.2.13",
     "@prisma/client": "^5.14.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-loading-skeleton": "^3.4.0",
-    "sass": "^1.77.4"
+    "sass": "^1.77.4",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",
